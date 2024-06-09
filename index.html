@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactivity API standalone experiment</title>
+</head>
+<body>
+
+    <div data-wp-interactive="interactive-section" data-wp-context='{ "isOpen": false }' data-wp-watch="callbacks.logIsOpen">
+        <button data-wp-on--click="actions.toggle" data-wp-bind--aria-expanded="context.isOpen">Toggle</button>
+
+        <p data-wp-bind--hidden="!context.isOpen">
+            Example Interactive - hello from an interactive section!
+        </p>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "preact": "./node_modules/preact/dist/preact.module.js",
+                "preact/hooks": "./node_modules/preact/hooks/dist/hooks.module.js",
+                "@preact/signals-core": "./node_modules/@preact/signals-core/dist/signals-core.module.js",
+                "@preact/signals": "./node_modules/@preact/signals/dist/signals.module.js",
+                "deepsignal": "./node_modules/deepsignal/dist/deepsignal.module.js",
+                "@wordpress/interactivity": "./node_modules/@wordpress/interactivity/build-module/index.js",
+                "./node_modules/@wordpress/interactivity/build-module/directives": "./node_modules/@wordpress/interactivity/build-module/directives.js",
+                "./node_modules/@wordpress/interactivity/build-module/init": "./node_modules/@wordpress/interactivity/build-module/init.js",
+                "./node_modules/@wordpress/interactivity/build-module/constants": "./node_modules/@wordpress/interactivity/build-module/constants.js",
+                "./node_modules/@wordpress/interactivity/build-module/vdom": "./node_modules/@wordpress/interactivity/build-module/vdom.js",
+                "./node_modules/@wordpress/interactivity/build-module/hooks": "./node_modules/@wordpress/interactivity/build-module/hooks.js",
+                "./node_modules/@wordpress/interactivity/build-module/store": "./node_modules/@wordpress/interactivity/build-module/store.js",
+                "./node_modules/@wordpress/interactivity/build-module/utils": "./node_modules/@wordpress/interactivity/build-module/utils.js"
+            }
+        }
+    </script>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

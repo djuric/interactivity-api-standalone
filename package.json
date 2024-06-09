@@ -1,0 +1,22 @@
+{
+  "name": "interactivity-api-standalone",
+  "version": "1.0.0",
+  "description": "Experiment with Interactivity API outside of WordPress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djuric/interactivity-api-standalone.git"
+  },
+  "author": "djuric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djuric/interactivity-api-standalone/issues"
+  },
+  "homepage": "https://github.com/djuric/interactivity-api-standalone#readme",
+  "dependencies": {
+    "@wordpress/interactivity": "^6.0.0"
+  }
+}
